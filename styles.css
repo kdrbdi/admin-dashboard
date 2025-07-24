@@ -103,7 +103,8 @@ h6 {
   color: var(--text-color);
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  align-items: start;
+  padding: 1em;
 }
 
 #logo {
@@ -114,11 +115,36 @@ h6 {
   justify-content: center;
 }
 
-#logo-icon {
+.logo-icon {
   fill: var(--text-color);
   width: 2rem;
 }
 
 #logo p {
   padding: 1rem;
+}
+
+#nav-sidebar nav a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+#nav-sidebar nav a:hover {
+  font-weight: 200;
+}
+
+#nav-sidebar nav ul {
+  padding-left: 0;
+  list-style-type: none;
+}
+
+#nav-sidebar nav li {
+  display: flex;
+  gap: 1.5rem;
+  padding: 0.5rem 0.5rem 0.5rem;
+}
+
+#nav-sidebar .nav-link-icon {
+  width: 1.5rem;
+  fill: var(--text-color);
 }
