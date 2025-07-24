@@ -104,6 +104,7 @@ h6 {
   display: flex;
   flex-direction: column;
   align-items: start;
+  gap: 2rem;
   padding: 1em;
 }
 
@@ -127,6 +128,7 @@ h6 {
 #nav-sidebar nav a {
   text-decoration: none;
   color: var(--text-color);
+  font-weight: 500;
 }
 
 #nav-sidebar nav a:hover {
@@ -144,7 +146,70 @@ h6 {
   padding: 0.5rem 0.5rem 0.5rem;
 }
 
-#nav-sidebar .nav-link-icon {
+.nav-link-icon {
   width: 1.5rem;
   fill: var(--text-color);
+}
+
+#header-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  background-color: var(--background-color);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0.5rem;
+}
+
+.header form {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+  gap: 0.2rem;
+}
+
+.header #search {
+  /* all: unset; */
+  border: 1px solid transparent;
+  /* outline: none; */
+  background-color: #fbf5de;
+  border-radius: 5px;
+  padding: 0.2em;
+  width: 30rem;
+}
+
+.header .nav-link-icon {
+  fill: var(--secondary-text-color);
+}
+
+#right-nav {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.header .profile-username {
+  font-weight: 500;
+}
+
+.header .profile-picture {
+  height: 2rem;
+  width: auto;
+}
+
+/* .header:nth-of-type(2) {
+  justify-content: space-between;
+} */
+
+.greeting {
+  display: flex;
+  gap: 0.7em;
+}
+
+.greeting .profile-picture {
+  height: 3rem;
+  width: auto;
 }
