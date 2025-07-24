@@ -1,0 +1,124 @@
+/* 1. Use a more-intuitive box-sizing model */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+  margin: 0;
+}
+
+/* 3. Enable keyword animations */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+
+body {
+  /* 4. Add accessible line-height */
+  line-height: 1.5;
+  /* 5. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 6. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 7. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* 8. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* 9. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+/*
+  10. Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/* ----- End off CSS Reset by Josh W. Comeau ------  */
+/* https://www.joshwcomeau.com/css/custom-css-reset/ */
+
+:root {
+  --primary-color: #58a0c8;
+  --secondary-color: #ffb4b4;
+  --accent-color: #e14434;
+  --text-color: #fefbc7;
+  --secondary-text-color: #212427;
+  --background-color: #fefbc7;
+
+  font-family: "Poppins", "Roboto", sans-serif;
+}
+
+* {
+  outline: 1px solid red;
+}
+
+#wrapper {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  height: 100vh;
+}
+
+#nav-sidebar {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#logo {
+  font-weight: 600;
+  font-size: 1.4rem;
+  letter-spacing: 1px;
+  display: flex;
+  justify-content: center;
+}
+
+#logo-icon {
+  fill: var(--text-color);
+  width: 2rem;
+}
+
+#logo p {
+  padding: 1rem;
+}
