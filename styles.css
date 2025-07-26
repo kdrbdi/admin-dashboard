@@ -78,7 +78,7 @@ h6 {
 /* https://www.joshwcomeau.com/css/custom-css-reset/ */
 
 :root {
-  --primary-color: #58a0c8;
+  --primary-color: #0070d2;
   --secondary-color: #ffb4b4;
   --accent-color: #e14434;
   --text-color: #fefbc7;
@@ -159,9 +159,9 @@ h6 {
 .header {
   background-color: var(--background-color);
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  padding: 0.5rem;
+  padding: 0.5rem 4rem;
 }
 
 .header form {
@@ -212,4 +212,28 @@ h6 {
 .greeting .profile-picture {
   height: 3rem;
   width: auto;
+}
+
+.btns-group {
+  display: flex;
+  gap: 1rem;
+}
+
+.btn-control {
+  display: inline-block;
+  outline: none;
+  cursor: pointer;
+  padding: 0 1.5rem;
+  background-color: var(--primary-color);
+  border-radius: 0.5rem;
+  border: 1px solid var(--primary-color);
+  color: #fff;
+  font-size: 0.9rem;
+  line-height: 30px;
+  font-weight: 500;
+  text-align: center;
+  :hover {
+    background-color: #005fb2;
+    border-color: #005fb2;
+  }
 }
