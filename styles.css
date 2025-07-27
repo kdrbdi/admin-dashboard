@@ -78,20 +78,16 @@ h6 {
 /* https://www.joshwcomeau.com/css/custom-css-reset/ */
 
 :root {
-  --primary-color: #0070d2;
+  --primary-color: #d25d5d;
   --secondary-color: #ffb4b4;
-  --accent-color: #e14434;
+  --accent-color: #b9375d;
   --text-color: #fefbc7;
   --secondary-text-color: #404040;
   /* --secondary-text-color: #212427; */
-  --background-color: #fefbc7;
+  --background-color: #eeeeee;
 
   font-family: "Poppins", "Roboto", sans-serif;
   font-size: 16px;
-}
-
-* {
-  outline: 1px solid red;
 }
 
 #wrapper {
@@ -158,8 +154,13 @@ h6 {
   flex-direction: column;
 }
 
-.header {
+#header-container {
+  padding: 1.5rem 0;
   background-color: var(--background-color);
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -243,7 +244,8 @@ h6 {
 #project-container {
   display: grid;
   grid-template-columns: 2fr 1fr;
-  background: rgb(245, 245, 245);
+  background: #f1faee;
+  padding: 0 3rem;
 }
 
 #dashboard {
@@ -264,7 +266,7 @@ h6 {
   padding: 0.5rem 0;
   font-weight: 500;
   font-size: 1rem;
-  /* height: min-content; */
+  margin-bottom: 1rem;
 }
 
 .card {
@@ -274,9 +276,11 @@ h6 {
 }
 
 .card,
-.container-announcements {
+.container-announcements,
+#trending-projects {
   background-color: var(--background-color);
   border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 
 .card-title {
@@ -295,10 +299,10 @@ h6 {
 }
 
 .footer-icon {
-  width: 2rem;
+  width: 1.5rem;
   height: auto;
   cursor: pointer;
-  fill: var(--secondary-text-color);
+  fill: var(--accent-color);
 }
 
 #feed {
@@ -308,7 +312,8 @@ h6 {
   font-size: 0.8rem;
 }
 
-.container-announcements {
+.container-announcements,
+#trending-projects {
   padding: 1.5rem 1rem;
 }
 
@@ -324,4 +329,25 @@ h6 {
 .announcement-title {
   font-weight: 500;
   font-size: 1rem;
+}
+
+#trending-projects {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.trending-project {
+  display: grid;
+  grid-template-columns: 4rem 1fr;
+}
+
+.trending-project .profile-picture {
+  width: 3rem;
+  height: auto;
+  grid-row: 1 / 3;
+}
+
+.trending-project .username {
+  font-weight: 500;
 }
